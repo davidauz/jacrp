@@ -1,0 +1,562 @@
+\documentclass[a4paper]{extarticle}
+\usepackage{amsfonts} % cursed Z symbol
+\usepackage{extsizes}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{paracol}
+% :map = :s#.*#\\pushnote{&}{() ``''}^Mj
+% :se guifont=AR\ PL\ KaitiM\ Big5\ Bold\ 20
+
+
+\usepackage{xeCJK}
+\setCJKmainfont{AR PL UMing CN}
+
+
+\newcounter{notecounter}
+\newwrite\savefile
+\immediate\openout\savefile=tempfile.tmp
+\newcommand{\pushnote}[2]{
+\unskip% removes any preceding space
+\stepcounter{notecounter}%
+\colorbox{gray!30}{{\Large #1}}%
+\raisebox{2ex}{\makebox[2pt]{\tiny\thenotecounter}}%
+\immediate\write\savefile{\thenotecounter : \space #1 \space #2
+
+}%
+\ignorespaces% removes any following space
+}
+
+\newcommand{\bothl}[2]{
+{\large #1}
+\switchcolumn
+#2
+\switchcolumn*
+}
+
+\newcommand{\outputnotes}{ \immediate\closeout\savefile \vspace{0.5cm} \large \input{tempfile.tmp} \vspace{0.5cm}
+\immediate\openout\savefile=tempfile.tmp
+\setcounter{notecounter}{0}
+}
+
+\newcommand{\separator}{
+\end{paracol}
+
+\outputnotes
+
+\begin{paracol}{2}
+}
+
+
+\begin{document}
+
+\section{Beginner}
+
+\subsection{To Live}
+\vspace{1cm}
+\begin{paracol}{2}
+\bothl{活着}{To Live}
+\bothl{余华}{Yu Hua}
+\vspace{1cm}
+\end{paracol}
+
+
+\begin{paracol}{2}
+\bothl{\pushnote{我}{(wǒ) ``I; me; my''}\pushnote{比}{(bǐ) ``to compare; (followed by a noun and adjective) more `adj.' than `noun'''}\pushnote{现在}{(xiàn zài) ``now; at present; at the moment; modern; current; nowadays''}\pushnote{年轻}{(nián qīng) ``young''}\pushnote{十岁}{(shí suì) ``ten'' + ``age''=``ten years of age''}\pushnote{的}{(de) possessive particle}\pushnote{时候}{(shí hou) ``time; length of time; moment; period''}，}{When I was ten years younger than I am now}
+
+\separator
+
+\bothl{\pushnote{获得}{(huò dé) ``to obtain; to receive; to get''}\pushnote{了}{(le) completed action marker}\pushnote{一个}{(yī) ``one'' + (gè), classifier}\pushnote{游手好闲}{(yóu shǒu hào xián) idiom: ``to idle about''; in this case 好 is (hào) ``to be fond of; to have a tendency to; to be prone to''}的\pushnote{职业}{(zhí yè) ``occupation; profession; vocation; professional''}，
+
+去\pushnote{乡间}{(xiāng jiān) ``in the country; rural; pastoral''}\pushnote{收集}{(shōu jí) ``to gather; to collect''}\pushnote{民间}{(mín jiān) ``among the people; popular; folk''}\pushnote{歌谣}{(gē yáo) ``folksong/ballad/nursery rhyme''}。}{I had the carefree job of going to the countryside to collect popular folk songs.}
+
+\separator
+
+\bothl{那一年的\pushnote{整个}{(zhěng gè) ``whole; entire; total''}夏天，我\pushnote{如同}{(rú tóng) ``like; as''}一只\pushnote{乱}{(luàn) ``in confusion or disorder; in a confused state of mind; disorder; upheaval; riot''}飞的\pushnote{麻雀}{(má què) ``sparrow; mahjong''}，}{That year, for the entire summer, I was like a sparrow soaring recklessly.}
+
+\separator
+
+\bothl{\pushnote{游荡}{(yóu dàng) ``to wander; to roam about; to loaf about; to be idle''}在\pushnote{知了}{(zhī liǎo) ``cicada''}和\pushnote{阳光}{(yáng guāng) ``sunshine''}\pushnote{充斥}{(chōng chì) ``to be full of; to flood; to congest''}的\pushnote{村舍}{(cūn shè) ``cottage''}
+
+\pushnote{田野}{(tián yě) ``field; open land''}。}{I would wander amid the village houses and the open country, which was full of cicadas and flooded with sunlight.}
+
+\separator
+
+\bothl{我\pushnote{喜欢}{(xǐ huan) ``to like; to be fond of''}喝\pushnote{农民}{(nóng mín) ``peasant; farmer''}那种\pushnote{带有}{(dài yǒu) ``to have as a feature or characteristic; to have an element of (confidence, sweetness, malevolence etc); to carry''}\pushnote{苦味}{(kǔ wèi) ``bitter taste; bitterness''}的茶水，}{I had a special affection for that bitter tea that farmers brew. }
+
+\separator
+
+
+\bothl{他们的茶\pushnote{桶}{(tǒng) ``bucket; (trash) can; barrel (of oil etc)''}\pushnote{田埂}{(tián gěng) ``embankment between fields''}的树下，我\pushnote{毫无}{(háo wú) ``not in the least; to completely lack''}\pushnote{顾忌}{(gù jī) ``to have misgivings; apprehension; worry; qualm; scruple''}地\pushnote{拿起}{(ná qǐ) ``to pick up''}\pushnote{漆}{(qī) ``paint; lacquer; to paint (furniture, walls etc)''}\pushnote{满}{(mǎn) ``to fill; full; filled; packed; fully; completely; quite; to reach the limit; to satisfy; satisfied; contented''}\pushnote{茶垢}{(chá gòu) ``tea stain (on the inside of a tea pot, tea cup etc)''}的\pushnote{茶碗}{(chá wǎn) ``teacup''}\pushnote{舀水}{(yǎo shǔi) ``to ladle water; to scoop up water''}喝，}{There would always be a bucket of just that kind of tea under a tree by the ridge between the fields, and without a second thought I would ladle out enough to fill my tea-stained bow.}
+
+\separator
+
+\bothl{还把\pushnote{自己}{(zì jǐ) ``oneself; one's own''}的\pushnote{水壶}{(shǔi hú) ``kettle; canteen; watering can''}\pushnote{灌}{(guàn) ``to irrigate; to pour''}满，与田里\pushnote{干活}{(gàn huǒ) ``to work; to be employed''}的\pushnote{男人}{(nán rén) ``man; male''}说上几句\pushnote{废话}{(fèi huà) ``nonsense; rubbish; superfluous words''}，}{Once I'd filled it to the brim, I'd start bullshitting with some of the male workers.}
+
+
+\separator
+
+
+\bothl{在\pushnote{姑娘}{gū niang() ``girl; young woman; young lady; daughter''}因我而起的\pushnote{窃窃}{(qiè qiè) ``privately; secretly; unobtrusively''}\pushnote{私}{(sī) ``personal; private; selfish''}笑里\pushnote{扬长而去}{(yáng cháng ér qù) idiom: ``to swagger off; to walk off (or drive off etc) without a second thought for those left behind''}。}{The girls would whisper among themselves and then stifle their chuckles as I'd swagger of.}
+
+
+\separator
+
+\bothl{我\pushnote{曾经}{(céng jīng) ``once; already; former; previously; ever; (past tense marker used before verb or clause)''}和一位\pushnote{守}{(shǒu) ``to guard; to defend; to keep watch; to abide by the law; to observe (rules or ritual); nearby; adjoining''}着瓜田的老人\pushnote{聊}{(liáo) ``(coll.) to chat; (literary) temporarily; for a while; (literary) somewhat; slightly; (literary) to depend upon''}了\pushnote{整整}{(zhěng zhěng) ``/whole; full''}一个\pushnote{下午}{(xià wǔ) ``afternoon''}，}{I once spent a whole aftemoon talking with an old man who kept a melon patch.}
+
+\separator
+
+\bothl{这是我\pushnote{有生以来}{(yǒu shēng yǐ lái) ``since birth; for one's whole life''}瓜吃得\pushnote{最多}{(zuì duō) ``at most; maximum; greatest (amount); maximal''}的一次，}{I ate more melons that day than I ever had in my life.}
+\bothl{当我\pushnote{站起来}{(zhàn qǐ lai) ``to stand up''}\pushnote{告辞}{(gào cí) ``to say goodbye; to take one's leave''}时，}{When I stood up to leave, }
+
+\separator
+
+\bothl{\pushnote{突然}{(tū rán) ``sudden; abrupt; unexpected''}\pushnote{发现}{(fā xiàn) ``to notice; to become aware of; to discover; to find; to detect; a discovery''}自己像个\pushnote{孕妇}{(yùn fù) ``pregnant woman''}\pushnote{一样}{(yī yàng) ``same; like; equal to; the same as; just like''}
+
+\pushnote{步履}{(bù lǚ) ``gait; to walk''}\pushnote{艰难}{(jiān nán) ``difficult; hard; challenging''}了。}{I suddenly realized that I had as much difficulty walking as a pregnant woman.}
+
+\separator
+
+\bothl{\pushnote{然后}{(rán hòu) ``then; after that; afterwards''}我与一位\pushnote{当上}{(dāng shang) ``to take up duty as; to assume a position; to assume; to take on (an office)''}了\pushnote{祖母}{(zǔ mǔ) ``father's mother; paternal grandmother''}的\pushnote{女人}{(nǚ rén) ``woman''}坐在\pushnote{门槛}{(mén kǎn) ``doorstep; sill; threshold''}上，}{Later that day, I sat on the porch with a woman who had already become a grandmother.}
+
+\bothl{她\pushnote{编}{(biān) ``to weave; to plait; to organize; to group; to arrange; to edit; to compile; to write; to compose; to fabricate; to make up''}着\pushnote{草鞋}{(cǎo xié) ``straw sandals''}为我\pushnote{唱}{(chàng) ``to sing; to call loudly; to chant''}了一支《十月\pushnote{怀胎}{(huái tāi) ``to become pregnant; to carry a child in the womb''}》。}{As she weaved a pair of straw sandals she sang “Ten Month Pregnancy” for me.}
+
+\separator
+
+\bothl{我最喜欢的是\pushnote{傍晚}{(bàng wǎn) ``dusk''}来到时，坐在农民的\pushnote{屋}{(wū) ``house, room''}前，}{What I loved most was sitting before the peasants’ houses just as dusk fell.}
+
+\bothl{看着他们将提上的井水\pushnote{泼}{(pō) ``to splash; to spill; rough and coarse; brutish''}在地上，\pushnote{压住}{(yā zhù) ``to press down; to crush down; to restrain (anger); to keep down (voice)''}
+
+\pushnote{蒸腾}{(zhēng tēng) ``(of a vapor etc) to rise; to hang in the air''}的\pushnote{尘土}{(chén tǔ) ``dust''}，\pushnote{夕阳}{(xī yáng) ``sunset; the setting sun''}的\pushnote{光芒}{(guāng máng) ``rays of light; brilliant rays; radiance''}在\pushnote{树梢}{(shù shāo) ``the tip of a tree; treetop''}上
+
+\pushnote{照射}{(zhào shè) ``to shine on; to light up; to irradiate''}下来，}{As the sun's rays came down through the delicate branches, I would watch the peasants pour well water onto the ground, cooling the hot dust and sand.}
+
+\separator
+
+\bothl{拿一把他们递过来的\pushnote{扇子}{(shàn zi) ``fan''}，尝尝他们和盐一样咸的\pushnote{咸菜}{(xián cài) ``salted vegetables; pickles''}
+，}{Holding the fan they passed over to me, I would try the pickled vegetables, which always tasted like salt.}
+\bothl{看看几个年轻女人，和男人们说着话。}{I would watch the girls and talk with the men.}
+\end{paracol}
+
+\outputnotes
+
+
+
+\section{Intermediate}
+\subsection{2001: A Space Odyssey}
+\vspace{1cm}
+By Sir Arthur Charles Clarke, published in 1968.
+\vspace{1cm}
+
+
+\begin{paracol}{2}
+\bothl{2001: A Space Odyssey}{
+\pushnote{太空}{(tài kōng) ``the firmament; outer space; aether; firmament''}
+\pushnote{漫游}{(màn yóu) ``roam; cruise; go on a pleasure trip''}
+}
+
+\separator
+
+
+\bothl{太初之夜 \vspace{0.5cm} }{PRIMEVAL NIGHT}
+\bothl{1 灭绝之路 \vspace{0.5cm} }{1 – The Road to Extinction}
+
+
+\bothl{这时，\pushnote{干旱}{(gān hàn) ``drought; arid; dry; aridity''}
+已经\pushnote{持续}{(chíxù) ``to continue; to persist; to last; sustainable; preservation''}
+了一千万年，可怕的恐龙也早已结束了\pushnote{主宰}{(zhǔ zǎi) ``dominate''; 宰 zǎi is ``to slaughter; to butcher; to kill (animals etc)/(coll.)'' as in 屠宰場 (tú zǎi chǎng) ``slaughterhouse'' }。}{The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended.}
+\bothl{在\pushnote{赤道}{(chì dào) ``Equator''; 赤 (chì) is  ``red, scarlet, bare, naked'' as in 赤脚 (chì jiǎo) ``bare feet''}此处，
+日后将以非洲之名而\pushnote{闻名}{(wén míng) ``famous''}的这块大陆上，
+求生之战的\pushnote{凶残}{(xiōng cán) ``fierce, brutal''}，
+已\pushnote{沸腾}{(fèi téng) ``boiling, to boil''}到新的高点，
+胜出者则尚未见\pushnote{踪影}{(zōng yǐng) ``trace, vestige''; 影 is ``shadow'', see 电影 (diàn yǐng) ``movie''}。
+}{Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight.
+}
+
+\separator
+
+\bothl{在这片\pushnote{干枯}{(gān kū) ``Dry and withered''}
+的\pushnote{不毛之地}{(bù máo zhī dì) idiom: `` A barren and barren place without crops, abandoned land '' }
+上，想要\pushnote{繁衍}{(fán yǎn) ``reproduction''}
+下去，或者起码有点\pushnote{存活}{(cún huó) ``survive''}
+下去的\pushnote{指望}{(zhǐ wang) ``hope'' }
+，就得要小，要快，要狠。\pushnote{狠}{hěn) ``ruthless; fierce; ferocious; determined; resolute; to harden (one's heart)''}
+}{In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.}
+\bothl{\pushnote{荒野}{(huāng yě) ``wilderness'' }
+上的\pushnote{猿人}{(yuán rén) ``Ape man'' }
+够不上这些条件，所以没的繁衍。
+}{The man-apes of the veldt were none of these things, and they were not flourishing.}
+
+\separator
+
+\bothl{再说明白点，他们已经离\pushnote{灭种}{(miè zhǒnɡ) ``extermination, extinction'' }
+不远。}{Indeed, they were already far down the road to racial extinction.}
+\bothl{他们五十来个，\pushnote{盘踞}{(pán jù) ``occupy'' } 
+了一些山洞。
+
+\pushnote{俯视}{(fǔ shì) ``Looking down'' from 俯 ``to look down; bow down'' and 视 ``look ; vision''} 
+而下，是一个干枯的小\pushnote{盆地}{(pén dì) ``basin'' } 
+。
+盆地里流过一条\pushnote{迟滞}{(chí zhì) ``sluggish; delay'' } 
+的小溪，是来自北方两百英里外山上的融雪。
+}{About fifty of them occupied a group of caves overlooking a small,
+parched valley, which was divided by a sluggish stream fed from snows
+in the mountains two hundred miles to the north.
+}
+\bothl{干旱厉害的时候，小溪\pushnote{彻底}{(chè dǐ) ``thorough; thoroughgoing; downright; every inch''}\pushnote{蒸发}{(zhēng fā) ``evaporate; evaporation; ablate; exhalation'' }
+，这个\pushnote{部落}{(bù luò) ``tribe''}
+就活在焦渴的阴影里。
+}{In bad times the stream vanished completely, 
+and the tribe lived in the shadow of thirst.
+}
+
+\separator
+
+\bothl{他们本来就\pushnote{饿惯}{饿 (è) ``hunger'', 惯 (guàn) ``be used to; be in the habit of; indulge'': ``Be used to hunger''}
+了，现在则\pushnote{濒临}{(bīn lín) ``be close to; border on; be on the verge of''}
+饿死。}
+{It was always hungry, and now it was starving.}
+\bothl{当黎明第一道\pushnote{朦胧}{(méng lóng) ``Obscure'' }\pushnote{曙光}{(shǔ guāng) ``Dawn'' }\pushnote{掩入}{(yǎn rù) ``Cover in'' }
+山洞的时候，\pushnote{望月者}{ from 望 (wàng) ``Towards, at'' + 月 (yuè) ``Moon'' + 者 (zhě) ``person'' = "He who looks at the Moon", "Moon-watcher"}
+发现父亲已经在夜里死了。
+}{When the first faint glow of dawn crept into the cave,
+Moon-Watcher saw that his father had died in the night. }
+\bothl{他并不明白``这个老东西''就是他的父亲，父子关系还不在他的理解范围之内。}
+{He did not know that the Old One was his father, for such a
+relationship was utterly beyond his understanding, }
+\bothl{\pushnote{然而}{(rán ér) ``However, but'' }
+当他看到那具\pushnote{羸弱}{(léi ruò) ``Weak and frail'' }
+的尸体时，心里还是\pushnote{隐约}{(yǐn yuē) ``Faint; indistinctint; vaguely'' }
+感到一阵不安——后来，这种不安才会演化为\pushnote{哀伤}{(āi shāng) ``sad; distressed; grieved; feel sorrow or grief'' }
+。
+}{but as he looked at the emaciated body he felt dim disquiet
+that was the ancestor of sadness.}
+
+\separator
+
+\bothl{两个孩子饿得一直低声\pushnote{哭泣}{( kū qì) ``cry; weep; sob; blubber'' }
+，望月者\pushnote{吼}{(hǒu) ``Roar; howl'' }
+了一声\pushnote{止住}{(zhǐ zhù) ``stop; halt; desist; bring to a stop;'' }
+他们。
+}{The two babies were already whimpering for food, but became silent
+when Moon-Watcher snarled at them. }
+其中一个孩子的妈妈，为了护她没法好好\pushnote{喂养}{(wèi yǎng) ``feed; raise; keep'' }
+的\pushnote{婴孩}{(yīng hái) ``baby; child'' }
+，\pushnote{愤怒}{(fèn nù) ``anger; rage; wrath; indignation; bile'' }
+\bothl{地朝他回吼了一声。}{One of the mothers, defending the
+infant she could not properly feed, gave him an angry growl in return; 
+}
+\bothl{但他连\pushnote{揍}{(zòu) ``beat; break; smash'' }
+她一\pushnote{拳}{(quán) ``boxing; fist; pugilism'' }
+、修理她\pushnote{放肆}{(fàng sì) ``unbridled; wanton; impudicity; presumption'' }
+的力气都没有了。
+}{he lacked the energy even to cuff her for her presumption.}
+\bothl{现在天色亮得可以出发了。}{Now it was light enough to leave.}
+
+\separator
+
+\bothl{望月者\pushnote{拖}{(tuō) ``drag; pull; mop; delay ; draw'' }
+着那具\pushnote{干枯}{(gān kū) ``withered; dried-up; wizened; shrivelled'' }
+的尸体，
+
+\pushnote{弯腰}{(wān yāo) ``stoop; bow; stoop down'' }
+钻出头顶有片\pushnote{斜}{(xié) `` inclined ; skew; slanting; bevel'' }\pushnote{岩}{(yán) ``rock; cliff; crag'' }\pushnote{延伸}{(yán shēn) ``extend; stretch; elongate; rolling out'' }
+出去的洞口。
+}{Moon-Watcher picked up the shriveled corpse and dragged it after him 
+as he bent under the low overhang of the cave.}
+\bothl{出了山洞，他把尸体
+\pushnote{扛}{(káng) ``shoulder; carry on the shoulder''}
+在\pushnote{肩上}{() ``''}
+，站直了身体——在这个世界上，
+还只有他这种动物有这个\pushnote{本领}{() ``''}
+。}{Once outside, he threw the body over his 
+shoulder and stood upright – the only animal in all this world able 
+to do so.}
+\bothl{比起他的同类，望月者几乎算是个巨人。}
+{Among his kind, Moon-Watcher was almost a giant. }
+
+\separator
+
+\bothl{近五\pushnote{英尺}{(yīng chǐ) ``foot (pl. feet)'', from 
+英 (yīng) ``England'' and 尺 (chǐ), an old
+Chinese unit of measure of almost one third of a meter}
+高，尽管营养不良，还有一百多\pushnote{磅重}{磅 (bàng) ``cut'', an old character here used for onomatopoeia + 重 (zhòng) ``weight''=磅重 ``English pound''}
+。}{He was nearly five feet high, and though badly undernourished weighed over a hundred pounds.}
+\bothl{他\pushnote{毛茸茸}{(máo rōng rōng) ``hairy; brushy; downy; flocky''}
+的身体，肌肉发达，介于人与猿之间，但他的头，则近乎人而非猿；
+}{His hairy, muscular body was halfway between ape and man,
+but his head was already much nearer to man than ape.}
+\bothl{额头很低，\pushnote{眼窝}{(yǎn wō) ``eye socket''}\pushnote{深}{(shēn) ``deep; difficult; profound; thoroughgoing''}\pushnote{陷}{(xiàn) ``trap; pitfall; defect; deficiency; sink''}
+，不过，他的\pushnote{基因}{(jī yīn) ``gene; genome''}
+里无疑已具备演化为人类的希望。
+}{The forehead was low, and there were ridges over the eye sockets,
+yet he unmistakably held in his genes the promise of humanity.}
+\bothl{
+当他望着\pushnote{更新世}{(gēng xīn shì) ``Pleistocene (geological epoch from 2m years ago, covering the most recent ice ages)''}
+这个\pushnote{残酷}{(cán kù) ``cruel; brutal; ruthless; inhuman; bloodiness''}
+的世界时，
+
+\pushnote{眼神}{(yǎn shén) ``expression in one's eyes; light; eyesight''}
+已经远非猿类可及。
+}{As he looked out upon the hostile world of the Pleistocene, there was already something in his gaze beyond the capacity of any ape.}
+
+\separator
+
+\bothl{在他\pushnote{黝黑}{(yǒu hēi) ``dark; swarthy''}\pushnote{深邃}{(shēn suì) ``profound; abstruse; deep; recondite''}
+的双眼里，\pushnote{透}{(tòu) ``penetrate; pass [seep] through; tell secretly; ''}
+着一种\pushnote{逐渐}{(zhú jiàn) ``gradually; by degrees; little by little''}\pushnote{苏醒}{(sū xǐng) ``revive; regain consciousness''}
+的\pushnote{知觉}{(zhī jué) ``consciousness; perception''}
+——一种不经多代演化\pushnote{不足}{(bù zú) ``insufficient; lacking; deficiency; not enough; inadequate; not worth; cannot; should not''}
+以具现、要灭绝则快得很的智能，在其中有了最初的\pushnote{闪烁}{(shǎn shuò) ``flicker; twinkle; evasive; vague''}
+。}{In those dark, deep-set eyes was a dawning awareness – the first intimations of an intelligence that could not possibly fulfill itself for ages yet, and might soon be extinguished forever.}
+
+\separator
+
+\bothl{四下没有危险的\pushnote{迹象}{(jì xiàng) ``sign; evidence; indication; token; hide''}
+，于是望月者\pushnote{沿}{(yán) `` along, follow; trim''}
+着洞外\pushnote{近乎}{(jìn hu) ``almost''}\pushnote{垂直}{(chuí zhí) ``vertical; perpendicular; squareness; verticality;''}
+的\pushnote{陡坡}{(dǒu pō) ``steep slope; heavy gradient; abrupt slope; bank'';
+陡 is  ``steep; precipitous; abrubtly; suddenly; unexpectedly'', see 
+陡然 (dǒu rán) ``suddenly; unexpectedly; abruptly; precipitously; stumbling''
+}爬下，身上背的尸体没有\pushnote{造成}{(zào chéng) ``cause; give rise to; bring about; create; work''}
+太大\pushnote{妨碍}{(fáng ài) ``hinder; impede; hamper; obstruct; bar''; 
+see also 障礙 (zhàng ài) ``barrier; obstruction; hindrance; impediment; obstacle''}
+。}{There was no sign of danger, 
+so Moon-Watcher began to scramble down the almost vertical 
+slope outside the cave, only slightly hindered by his burden.}
+
+\separator
+
+\bothl{
+\pushnote{部落}{(bù luò) ``tribe; clan''}
+里其他的猿人，似乎一直在等待他的信号般，\pushnote{纷纷}{(fēn fēn) ``one after another; in succession''}
+从\pushnote{岩壁}{(yán bì) ``a wall of rock''}
+下方自己的\pushnote{洞穴}{(dòng xué) ``cave; cavern; burrow; grotto''}
+里\pushnote{钻出来}{(zuàn chū lái) ``come out; emerge''}
+，\pushnote{急急忙忙}{(jí jí máng máng) ``hurried and busy; in a rush; in great hast''}
+赶向那条\pushnote{泥泞}{(ní nìng) ``muddy; slushy; miry; sloppy; loblolly''}
+的小溪
+
+，\pushnote{寻觅}{(xún mì) ``seek; look for''}
+他们早上要喝的水。}{As if they had been waiting for his signal,
+the rest of the tribe emerged from their own homes farther down 
+the rock face, and began to hasten toward the muddy waters of 
+the stream for their morning drink.}
+
+\separator
+
+\bothl{望月者望过谷地，看看是否有“对方”出现。}{Moon-Watcher 
+looked across the valley to see if the Others were in sight,}
+\bothl{但没有踪影。}{but there was no trace of them.}
+\bothl{也许他们还没有离开自己的洞穴，也许已经沿着山腰去他处
+\pushnote{觅食}{(mì shí) ``foraging''; this is the same 觅 seen above in 寻觅}
+了。} {Perhaps they had not yet left their caves, or were already 
+foraging farther along the hillside. }
+
+
+\bothl{\pushnote{既然}{(jì rán) ``since; as; now that; in as much''}
+不见踪影，望月者就把他们忘在脑后。}{Since they were nowhere to be seen, Moon-Watcher forgot them;}
+
+
+\bothl{他还没有能力同时
+\pushnote{操心}{(cāo xīn) ``bother ; worry about; trouble about; take pains''}
+一件以上的事情。}{he was incapable of worrying about more than one thing at a time.}
+
+\separator
+
+\bothl{首先他得解决这个老东西，但这个问题不用花什么
+\pushnote{脑筋}{(nǎo jīn)  ``brains; mind; head; way of thinking''}
+。}
+{First he must get rid of the Old One, but this was a problem 
+that demanded little thought. }
+\bothl{这一季里，死的\pushnote{同伴}{(tóng bàn) ``companion; comrade; fellow''}
+很多。}{There had been many deaths this
+season, }
+\bothl{之前，他自己洞里就已经死了一个。}{, one of them in his own cave; }
+\bothl{他只要在上次
+\pushnote{弦月}{(xián yuè) ``half-moon; the 7th and 8th and 22nd and 23rd of the lunar month''}
+\pushnote{时分}{(shí fēn) ``time; period during the day''}
+扔下那个新生婴儿的地方放下这具\pushnote{尸首}{(shī shou)  ``corpse; carcass; dead body''}
+，\pushnote{鬣狗}{(liè gǒu) ``hyena''}
+就会解决剩余问题。}{he had only to put the corpse where he had left the new baby at the last quarter of the moon, and the hyenas would do the rest.
+}
+\bothl{鬣狗好像知道他要来，已经在这小山谷和
+\pushnote{疏}{(shū) ``dredge ; neglect; disperse; scatter; sparse''}
+林草原的交口上等着了。}
+{They were already waiting, where the little valley fanned out into the savanna, almost as if they had known that he was coming.}
+\bothl{望月者把尸体丢在一棵
+\pushnote{灌木}{(guàn mù) ``bush; shrub''}
+下——先前的骨头都已经不见——然后就急急赶回部落。}{Moon-Watcher left the body under a small bush – all the earlier bones were already gone – and hurried back to rejoin the tribe.}
+\bothl{从此，望月者再没有想起过他的父亲。} {He never thought of his father again.}
+
+\separator
+
+\bothl{他的两个\pushnote{配偶}{(pèi ǒu) ``spouse''}
+、其他洞穴出来的成年同类，以及大多数的少年同类，正沿山谷而上，在那些被干旱\pushnote{摧残}{(cuī cán) ``to ravage; to ruin''}
+的林木间觅食，找一些浆果、多汁的树根和树叶，以及偶尔意外\pushnote{捕获}{(bǔ huò) ``to catch; to capture; to seize''}
+的小\pushnote{蜥蜴}{(xī yì) ``lizard''}
+和\pushnote{啮齿动物}{(niè chǐ dòng wù) ``rodent''}
+。}{His two mates, the adults from the other caves, and most of the youngsters were foraging among the drought-stunted trees farther up the valley, looking for berries, succulent roots and leaves, and occasional windfalls like small lizards or rodents. }
+\bothl{只有小婴儿和\pushnote{虚弱}{(xū ruò) ``weak; in poor health''}\pushnote{不堪}{(bù kān) ``cannot bear; cannot stand; utterly; extremely''}的老家伙才留在洞穴里。
+觅食一天之后如果还有剩余，也许还可以喂他们吃一点。
+如果没有，鬣狗则很快又要走\pushnote{走运}{(zǒu yùn) ``to have good luck; to be in luck''}了。}{Only the babies and the feeblest of the old folk were left in the caves; if there was any surplus food at the end of the day's searching, they might be fed. If not, the hyenas would soon be in luck once more.}
+\bothl{不过今天是很棒的一天——虽然望月者对过去并没有什么真正的记忆，也没法把这一次和其他时候相比较。}
+{But this day was a good one – though as Moon-Watcher had no real remembrance of the past, he could not compare one time with another. }
+
+\separator
+
+\bothl{他在一棵枯树根上发现了一个\pushnote{蜂窝}{(fēng wō)  ``honeycomb; beehive''}，因而享受了一顿他们\pushnote{族类}{(zú lèi) ``clan; race''}\pushnote{前所未知}{(qián suǒ wèi zh1) idiom: ``new experience, previously unknown''}的\pushnote{无上美味}{(wǔ shàng měi wèi) idiom: ``the ultimate delicacy''}。
+傍晚时分，他带着大伙回家的时候，还不时\pushnote{舔舔}{(tiǎn tiǎn) ``to lick; to lap''}手指。}{He had found a hive of bees in the stump of a dead tree, and so had enjoyed the finest delicacy that his people could ever know; he still licked his fingers from time to time as he led the group homeward in the late afternoon.}
+\bothl{当然，他也被\pushnote{蜇}{(zhē) ``to sting''}了好几下，但他没有太在意。}{Of course, he had also collected a fair number of stings, but he had scarcely noticed them.}
+\bothl{现在他几乎可以说从没这么心满意足过，因为虽然还是饿，但已经不会饿得虚软。}{He was now as near to contentment as he was ever likely to be; for though he was still hungry, he was not actually weak with hunger.}
+\bothl{对猿人来说，\pushnote{夫复何求}{(fū fù hé qiú) idiom: to not need enything anymore``''}。}{That was the most to which any man-ape could ever aspire.}
+\end{paracol}
+
+\outputnotes
+
+\subsection{Moby Dick (白鲸)}
+
+
+\vspace{1cm}
+by Herman Melville, published in 1851
+
+\vspace{1cm}
+from Chapter 16: The Ship.
+
+\vspace{1cm}
+
+\begin{paracol}{2}
+\bothl{“您就是‘\pushnote{裴廓德号}{Transliteration: 裴 (péi), a surname; ``(of a garment) long and flowing'' + 
+廓 (kuò) ``(bound form) extensive; vast; (bound form) outline; general shape; (bound form) to expand; to extend; '' +
+德 (dé) ``virtue; goodness; morality; ethics; kindness; favor; character; kind'' +
+号 (hào) ``ordinal number; day of a month; mark; sign; business establishment; size; ship suffix (in this case in particular); horn (wind instrument); bugle call; assumed name; to take a pulse; classifier used to indicate number of people''.}’的船长吗？”我走到\pushnote{帐篷}{(zhàng peng) ``tent''}门口问了一声。}{“Is this the Captain of the Pequod?” said I, advancing to the door of the tent.}
+\bothl{
+“就算我是，你找船长干什么？”他\pushnote{咄咄逼人}{(duō duō bī rén) ``overbearing; forceful; aggressive; menacing; imperious''}。
+}{
+“Supposing it be the captain of the Pequod, what dost thou want of him?” he demanded.
+}
+\bothl{
+“我想当水手。”
+}{
+“I was thinking of shipping.”
+}
+
+\bothl{
+“你想当，是吗？我看你不像\pushnote{南塔基}{Transliteration: 南 (nán) ``South'' +
+塔 (tǎ) ``pagoda'' + 基 (j1) ``base; foundation''}人——你在\pushnote{漏水}{(lòu shuǐ) ``to leak (of water)''}的船上干过水手？”
+}{
+“Thou wast, wast thou? I see thou art no Nantucketer—ever been in a stove boat?”
+}
+
+\bothl{
+“没有，先生，从没干过。”
+}{
+“No, Sir, I never have.”
+}
+
+\bothl{
+“对\pushnote{捕鲸}{(bǔ jīng) ``whaling'', from
+捕 ``to catch; to seize; to capture'' and 
+鲸 ``whale''.  N.B. the word for ``whale'' is 鲸鱼 (jīng yú)}这行当\pushnote{一窍不通}{(yī qiào bù tōng) ``lit. doesn't (even) enter a single aperture (of one's head); I don't understand a word (idiom); it's all Greek to me''}，我敢肯定——\pushnote{呃}{(è) ``exclamation ; hiccup''}？”
+}{
+“Dost know nothing at all about whaling, I dare say—eh?
+}
+\end{paracol}
+
+\outputnotes
+
+\begin{paracol}{2}
+\bothl{“是的，先生。但我保证，我很快就可以学会。我在\pushnote{商船}{(shāng chuáng) ``merchant ship''}上当过几回水手，我想——”}{“Nothing, Sir; but I have no doubt I shall soon learn. I've been several voyages in the merchant service, and I think that—”}
+\bothl{“该死的商船水手。}{“Merchant service be damned.}
+\bothl{别跟我说那些\pushnote{鬼话}{(gǔi huà) ``lie; false words; nonsense''}。}{ Talk not that lingo to me.}
+\bothl{你看那条腿？}{ Dost see that leg?—}
+\bothl{你再敢跟我\pushnote{胡扯}{(hú chě) ``to chatter; nonsense; blather''; 扯 is ``to pull; to tear; (of cloth, thread etc) to buy; to chat; to gossip (coll.)''}商船水手的事，我就叫你的腿和屁股分家\pushnote{啰}{(luo) ``(final exclamatory particle)'', it's the 啰 in 哈啰 (hā luō) ``hello''}。}{I'll take that leg away from thy stern, if ever thou talkest of the marchant service to me again. }
+\bothl{商船水手，算什么！}{Marchant service indeed! }
+\bothl{我看你现在对干过商船水手很\pushnote{自豪}{(zì háo) ``proud (of one's achievements etc)''}吧。}{I suppose now ye feel considerable proud of having served in those marchant ships.}
+\bothl{不过算你走运，\pushnote{伙计}{(huǒ jī) ``partner; fellow; mate; waiter; servant; shop assistant''}！你是为什么想要去捕鲸的呢，呃？}{ But flukes! man, what makes thee want to go a whaling, eh?—}
+\bothl{这很可疑，不是吗？你说。}{it looks a little suspicious, don't it, eh?—}
+\bothl{——你干过海盗，是吗？——}{Hast not been a pirate, hast thou?—}
+\bothl{你\pushnote{抢劫}{(qiǎng jié) ``to rob; looting'', see also 劫机 (jié jī) ``hijacking; air piracy''}过那商船的船长，有这事吗？——}{Didst not rob thy last Captain, didst thou?—}
+\bothl{你出海的时候，会对船上的\pushnote{头头}{(tóu tóu) ``head; chief''}们起\pushnote{歹}{(dǎi) ``bad; wicked; evil''}念吗？”}{Dost not think of murdering the officers when thou gettest to sea?”}
+
+\separator
+
+
+\bothl
+{我表情\pushnote{坚定}{(jiān dìng) ``firm; steady; staunch; resolute''}地\pushnote{声明}{(shēng míng) ``to state; to declare; statement; declaration''}，我从未干过这类事情。}
+{I protested my innocence of these things.}
+\bothl{
+我看得出，在这半是\pushnote{幽默}{(yōu mò) ``(loanword) humor; humorous''}半是\pushnote{挖苦}{(wā kǔ) ``to speak sarcastically; to make cutting remarks''; 挖 is ``to dig'' and 苦 is ``bitter'' as in 辛苦 (xīn kǔ) ``exhausting; hard; tough; arduous; to work hard; to go to a lot of trouble; hardship(s)''}的话语后面，这个老水手，这个与世\pushnote{隔绝}{(gé jué) ``to cut off; to isolate; isolated (from the world)''}的\pushnote{教友}{(jiào yǒu) ``church member''}会\pushnote{信徒}{(xìn tú) ``believer''}式的南塔基人，脑子里装满了岛民的偏见。}{ I saw that under the mask of these half humorous innuendoes, this old seaman, as an insulated Quakerish Nantucketer, was full of his insular prejudices,}
+\bothl{除了\pushnote{科德角}{Transliteration: 科 (kē) ``branch of study; administrative section; division; field; branch'' + 德 + 角 (jiǎo) ``angle; corner; horn; horn-shaped''}人和
+\pushnote{维因耶德}{Transliteration: 维 (wéi) ``to preserve; to maintain; to hold together; dimension; vitamin'' + 因 (yīn) ``cause; reason; because'' + 耶 (yē) phonetic for ``ye'', seen as part of 椰子 (yē zi) ``coconut'' + 德}人，他们不相信任何外地人。}{ and rather distrustful of all aliens, unless they hailed from Cape Cod or the Vineyard.}
+
+\separator
+
+\bothl{
+“说说，你想要去捕鲸和原因是什么呢？
+
+我\pushnote{弄清}{(nòng qīng) ``to clarify; to fully understand''}了这个，才考虑\pushnote{雇}{(gù) ``to employ; to hire; to rent'', commonly used in 雇佣 (gù yōng) ``to employ; to hire''}你当水手。”}{“But what takes thee a-whaling? I want to know that before I think of shipping ye.”}
+\bothl{
+“好的，先生，我想看看捕鲸是怎么回事？我想去\pushnote{见识}{(jiàn shi) ``to gain first-hand knowledge of sth; to experience for oneself; knowledge; experience; insight''}见识。”}{“Well, sir, I want to see what whaling is. I want to see the world.”}
+\bothl{
+“想看看捕鲸是怎么回事，是不是，你知道亚哈船长吗？”
+}{
+“Want to see what whaling is, eh? Have ye clapped eye on Captain Ahab?”
+}
+\bothl{“亚哈船长是谁，先生？”“}{“Who is Captain Ahab, sir?”}
+\bothl{哦，哦，我就知道你不知道。亚哈船长是这船的船长。”}{“Aye, aye, I thought so. Captain Ahab is the Captain of this ship.”}
+\bothl{
+“这么说，是我弄错了。我还以为我是在和船长本人说话呢。”
+}{
+“I am mistaken then. I thought I was speaking to the Captain himself.”
+}
+
+\bothl{“你是在和\pushnote{法勒}{Transliteration: from 法 (fǎ) ``law; method; way'' + 勒 (lè) ``(literary) bridle; halter; headstall; to rein in; to compel; to force''}船长说话——法勒船长在听你说话，小伙子。”}{“Thou art speaking to Captain Peleg—that's who ye are speaking to, young man. }
+\bothl{‘裴廓德号’这次出海，是由我和\pushnote{比勒达}{比 (bǐ) ``to compare'' + 勒 + 达}船长负责准备，备齐船上所需要的一切，包括水手。}{It belongs to me and Captain Bildad to see the Pequod fitted out for the voyage, and supplied with all her needs, including crew. }
+\bothl{我们两个都是股东和代理人。}{We are part owners and agents. }
+\bothl{不过，我要告诉你，假如你真想知道捕鲸是怎么回事，我\pushnote{倒是}{(dào shi) ``contrary to what one might expect; actually; contrariwise; why don't you''}在你签字\pushnote{画押}{(huà yā) ``to sign; to make one's mark''}\pushnote{绝不反悔}{(jué bù fǎn hǔi) ``to vow not to break one's promise''}之前，有一个\pushnote{法子}{(fǎ zi) ``way; method''}让你了解一下。}{But as I was going to say, if thou wantest to know what whaling is, as thou tellest ye do, I can put ye in a way of finding it out before ye bind yourself to it, past backing out.”}
+
+\separator
+
+\bothl{小伙子，去看看亚哈船长吧，你会发现他只有一条腿。}{Clap eye on Captain Ahab, young man, and thou wilt find that he has only one leg.”}
+\bothl{
+“你的意思是……被大鲸给弄去了一条？”“
+}{
+“What do you mean, sir? Was the other one lost by a whale?”
+}
+\bothl{
+是大鲸弄去的！小伙子，我跟你说：
+
+是一条曾经把一只小艇打得粉碎的无比
+
+\pushnote{凶恶}{(xiōng è) ``fierce; ferocious; fiendish; frightening''}的\pushnote{抹香鲸}{(mǒ xiāng jīng) ``sperm whale; cachalot (Physeter macrocephalus)''}把腿\pushnote{咬}{(yǎo) ``to bite; to nip''}断，\pushnote{嚼}{(jiáo) ``to chew''}\pushnote{碎}{(suì) ``(transitive or intransitive verb) to break into pieces; to shatter; to crumble; broken; fragmentary; scattered''}，嚼得\pushnote{咯吱}{(gē zhī) ``(onom.) creak; groan''}咯吱\pushnote{响}{(xiǎng) ``echo; sound; noise; to make a sound; to sound; to ring; loud; classifier for noises''}！——\pushnote{唉}{(āi) ``interjection or grunt of agreement or recognition (e.g. yes, it's me!); to sigh''}！唉！”}{“Lost by a whale! Young man, come nearer to me: it was devoured, chewed up, crunched by the monstrousest parmacetty that ever chipped a boat!—ah, ah!”
+}
+
+\separator
+
+
+\bothl{他\pushnote{憋足了劲}{(biē zú le jìn) idiom: ``reach the limit, use up all the energy''}的\pushnote{神态}{(shén tài) ``appearance; manner; bearing; deportment; look; expression''}\pushnote{着实}{(zhuó shí) ``truly; indeed; severely; harshly''}把我\pushnote{镇住}{(zhèn zhù) ``to dominate; to control; to subdue; to crush''}了，最后两声\pushnote{发自}{(fā zì) ``to evolve from''}内心的\pushnote{痛苦}{(tòng kǔ) ``pain; suffering; painful''}\pushnote{呻吟}{(shēn yín) ``to moan; to groan''}，也很让我为之\pushnote{震撼}{(zhèn hàn) ``to shake; to shock; to stun; shocking; stunning; shock''}，但我尽量保持神态自然，说：}{I was a little alarmed by his energy, perhaps also a little touched at the hearty grief in his concluding exclamation, but said as calmly as I could, }
+\bothl{“你说的肯定错不了，先生，可是我怎么知道那条鲸竟会如此\pushnote{十恶不赦}{(shí è bù shè) ``wicked beyond redemption (idiom); heinous''}呢，说实在的，我可以从这简单的事故中\pushnote{推知}{(tūi zhī) ``to infer''}许多\pushnote{情形}{(qíng xing) ``circumstances; situation''}。”}{“What you say is no doubt true enough, sir; but how could I know there was any peculiar ferocity in that particular whale, though indeed I might have inferred as much from the simple fact of the accident.”}
+
+\separator
+
+\bothl{“你看你，小伙子，你还\pushnote{嫩}{(nèn) ``young and tender; (of food) tender; lightly cooked; (of color) light; (of a person) inexperienced; unskilled''}了点，明白吗；不过还数你不好\pushnote{吹嘘}{(chuī xū) ``to brag''}。当然啰，你是出过海的，可这算得了什么？”}{“Look ye now, young man, thy lungs are a sort of soft, d'ye see; thou dost not talk shark a bit. Sure, ye've been to sea before now; sure of that?”}
+\bothl{“先生，”我说，“我记得我跟你说出过四次海，是在商——”}{“Sir,” said I, “I thought I told you that I had been four voyages in the merchant—”}
+\bothl{“你别再说了！记得对商船水手有何感想吗——别惹我烦——我不想听。}{“Hard down out of that! Mind what I said about the marchant service—don't aggravate me—I won't have it. }
+\bothl{不过，话总得说明白。我已经给你\pushnote{挑明}{(tiǎo míng) ``to illuminate; to open up (a topic)''}了捕鲸是怎么回事？你还想去捕鲸吗？”}{But let us understand each other. I have given thee a hint about what whaling is; do ye yet feel inclined for it?”}
+\bothl{“没错，先生。”}{“I do, sir.”}
+\bothl{“很好，那么，你敢把鱼\pushnote{叉}{(chā) ``fork; pitchfork; prong; pick; cross; intersect''}\pushnote{刺}{(cì) ``thorn; sting; thrust; to prick; to pierce; to stab; to assassinate; to murder''}进一条活鲸的\pushnote{喉咙}{(hóu lóng) ``throat''}，再\pushnote{穷追不舍}{(qióng zhuī bù shě) ``to pursue relentlessly''}
+吗？你说，快告诉我！”}{“Very good. Now, art thou the man to pitch a harpoon down a live whale's throat, and then jump after it? Answer, quick!”}
+\bothl{“我敢，先生。如果非这么干不可的话，或者说不这样就会被鲸干掉的话，我会敢的。可我认为不会有这种情况。”}{“I am, sir, if it should be positively indispensable to do so; not to be got rid of, that is; which I don't take to be the fact.”}
+
+\end{paracol}
+
+\outputnotes
+
+\end{document}
